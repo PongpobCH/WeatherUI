@@ -9,13 +9,13 @@ namespace Stardew.InventorySystem
         public ItemData[] Items => itemList.ToArray();
         [SerializeField] List<ItemData> itemList = new List<ItemData>();
 
-        public ItemData[] GetItemsByName(ItemName targetName)
+        public ItemData[] GetItemsByType(ItemType targetType)
         {
             //Create a list that will hold all the items that matched the targetType
             var resultList = new List<ItemData>();
             foreach (var itemData in itemList)
             {
-                if (itemData.type == targetName)
+                if (itemData.type == targetType)
                     resultList.Add(itemData);
             }
 
@@ -40,15 +40,16 @@ namespace Stardew.InventorySystem
         public string displayName;
         public string description;
         public Sprite icon;
-        public ItemName type;
+        public ItemType type;
         public int count;
     }
 
-    public enum ItemName
+    public enum ItemType
     {
         Seeds, 
         Sapling, 
-        Herbs, 
+        Herbs,
+        Tools, 
         Others
     }
 }
