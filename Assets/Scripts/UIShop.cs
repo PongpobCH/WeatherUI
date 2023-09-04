@@ -21,10 +21,11 @@ namespace Stardew.InventorySystem
         {
             categoryText.text = info.name;
         }
-    /*public void SetItemList(UIItem_Data[] uiDatas)
-    {
+        
+        public void SetItemList(UIItem_Data[] uiDatas)
+        {
 
-    }*/
+        }
     
     }
     
