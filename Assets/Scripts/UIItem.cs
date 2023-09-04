@@ -18,19 +18,19 @@ public class UIItem : MonoBehaviour
 
     [SerializeField] Image selectedImage;
 
-  /*  public void SetData(UIItem_Data data)
+  public void SetData(UIItem_Data data)
     {
         itemNameText.text = data.itemData.displayName;
-        categoryNameText.text = data.itemData.displayCategoryName;
-        descriptionText.text = data.itemData.displayDescription;
-        itemDescription.image = data.itemData.displayItemDesctiption;
+        //categoryNameText.text = data.itemData.displayCategoryName;
+        descriptionText.text = data.itemData.description;
+        //itemDescription.image = data.itemData.displayItemDesctiption;
         
         selectedImage.gameObject.SetActive(data.isSelected);
     }
-} ONLY OPEN WHEN THERE IS ITEMDATA CLASS*/ 
+    } 
 
-/*public class UIItem_Data
-{
+    public class UIItem_Data
+    {
     public ItemData itemData;
     public bool isSelected;
 
@@ -39,6 +39,7 @@ public class UIItem : MonoBehaviour
         this.itemData = itemData;
         this.isSelected = isSelected;
     }
-} ONLY OPEN WHEN THERE IS ITEMDATA CLASS */
-}
+    
+    }
+
 }

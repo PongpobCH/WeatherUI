@@ -23,15 +23,6 @@ namespace Stardew.InventorySystem
             return resultList.ToArray();
         }
 
-        public void Add(ItemData itemToAdd)
-        {
-            
-        }
-
-        public void Remove(ItemData itemToRemove)
-        {
-            
-        }
     }
 
     [Serializable]
@@ -46,10 +37,8 @@ namespace Stardew.InventorySystem
 
     public enum ItemType
     {
-        Seeds, 
-        Sapling, 
-        Herbs,
-        Tools, 
-        Others
+        Seeds,
+        Fertilizer,
+        Decoration
     }
 }
