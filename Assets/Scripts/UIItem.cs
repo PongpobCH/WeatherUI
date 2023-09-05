@@ -9,7 +9,7 @@ namespace Stardew.InventorySystem
 {
 public class UIItem : MonoBehaviour, IPointerExitHandler, IPointerEnterHandler
 {
-    [SerializeField] Image itemImage;
+    public GameObject itemImage;
     [SerializeField] TMP_Text itemName;
     [SerializeField] TMP_Text countText;
     [SerializeField] UIShop uiShop;
@@ -22,10 +22,10 @@ public class UIItem : MonoBehaviour, IPointerExitHandler, IPointerEnterHandler
     [SerializeField] TMP_Text price;
     [SerializeField] GoldManager goldManager;
 
-    public UIItem_Data itemDescription;
     public void SetData(UIItem_Data data)
     {
-        itemImage.sprite = data.itemData.icon;
+        Image imageComponent = itemImage.GetComponent<Image>();
+        imageComponent.sprite = data.itemData.icon;
         itemName.text = data.itemData.displayName;
         countText.text = data.itemData.count.ToString();
     }
