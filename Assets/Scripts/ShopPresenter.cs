@@ -10,8 +10,8 @@ namespace Stardew.InventorySystem
         int currentCategoryIndex;
 
         int maxShownItemCount;
-        int maxCategoryCount = 4;
-        int pageSize = 6;
+        int maxCategoryCount = 2;
+        int pageSize = 3;
 
         [SerializeField] UIShop ui;
         [SerializeField] StardewInventory inventory;
