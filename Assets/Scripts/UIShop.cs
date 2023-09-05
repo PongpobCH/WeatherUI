@@ -12,13 +12,18 @@ namespace Stardew.InventorySystem
     [Header("Item List")]
     [SerializeField] UIItem itemUIPrefab;
     [SerializeField] List<UIItem> itemUIList = new List<UIItem>();
-    [SerializeField] int itemPrice;
-    [SerializeField] TMP_Text itemPriceText;
     [SerializeField] GameObject description;
         
         void Start()
         {
-
+            itemUIPrefab.gameObject.SetActive(false);
+        }
+        public void ClearAllItemUIs()
+        {
+            foreach (UIItem uiItem in itemUIList)
+                Destroy(uiItem.gameObject);
+            
+            itemUIList.Clear();
         }
 
         public void SetItemList(UIItem_Data[] uiDatas)
@@ -32,14 +37,6 @@ namespace Stardew.InventorySystem
             itemUIList.Add(newItemUI);
             newItemUI.SetData(uiItemData);
             }
-        }
-
-        public void ClearAllItemUIs()
-        {
-            foreach (UIItem uiItem in itemUIList)
-                Destroy(uiItem.gameObject);
-            
-            itemUIList.Clear();
         }
 
         public void ShowItemDescription(Vector3 position)
