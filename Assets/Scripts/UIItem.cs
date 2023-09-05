@@ -13,10 +13,14 @@ public class UIItem : MonoBehaviour, IPointerExitHandler, IPointerEnterHandler
     [SerializeField] TMP_Text itemName;
     [SerializeField] TMP_Text countText;
     [SerializeField] UIShop uiShop;
+    [SerializeField] ItemData ItemData;
 
+    [Header("Description")]
     [SerializeField] TMP_Text nameText;
     [SerializeField] TMP_Text typeText;
     [SerializeField] TMP_Text description;
+    [SerializeField] TMP_Text price;
+    [SerializeField] GoldManager goldManager;
 
     public UIItem_Data itemDescription;
     public void SetData(UIItem_Data data)
@@ -28,16 +32,22 @@ public class UIItem : MonoBehaviour, IPointerExitHandler, IPointerEnterHandler
 
     public void OnPointerEnter(PointerEventData eventData)
     {
+        /*if (eventData.pointerEnter.transform.name == itemDescription.itemData.displayName)
+        {
         nameText.text = itemDescription.itemData.displayName;
         typeText.text = itemDescription.itemData.type.ToString();
         description.text = itemDescription.itemData.description;
+        price.text = itemDescription.itemData.count.ToString();
+        }*/
         
         uiShop.ShowItemDescription(transform.position);
+        Debug.Log("Enter");
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
         uiShop.HideItemDescription();
+        Debug.Log("Exit");
     }
 
     } 
