@@ -28,19 +28,16 @@ public class UIItem : MonoBehaviour, IPointerExitHandler, IPointerEnterHandler
         imageComponent.sprite = data.itemData.icon;
         itemName.text = data.itemData.displayName;
         countText.text = data.itemData.count.ToString();
+        
+        nameText.text = data.itemData.displayName;
+        typeText.text = data.itemData.type.ToString();
+        description.text = data.itemData.description;
+        price.text = data.itemData.count.ToString();
     }
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        /*if (eventData.pointerEnter.transform.name == itemDescription.itemData.displayName)
-        {
-        nameText.text = itemDescription.itemData.displayName;
-        typeText.text = itemDescription.itemData.type.ToString();
-        description.text = itemDescription.itemData.description;
-        price.text = itemDescription.itemData.count.ToString();
-        }*/
-        
-        uiShop.ShowItemDescription(transform.position);
+        uiShop.ShowItemDescription();
         Debug.Log("Enter");
     }
 

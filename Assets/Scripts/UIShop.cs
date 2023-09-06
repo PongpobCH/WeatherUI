@@ -39,10 +39,9 @@ namespace Stardew.InventorySystem
             }
         }
 
-        public void ShowItemDescription(Vector3 position)
+        public void ShowItemDescription()
         {
             description.SetActive(true);
-            description.transform.position = position;
         }
 
         public void HideItemDescription()
