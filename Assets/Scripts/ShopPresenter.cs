@@ -10,8 +10,8 @@ namespace Stardew.InventorySystem
         int currentCategoryIndex;
 
         int maxShownItemCount;
-        int maxCategoryCount = 2;
-        int pageSize = 3;
+        int maxCategoryCount = 4;
+        int pageSize = 5;
 
         [SerializeField] UIShop ui;
         [SerializeField] StardewInventory inventory;
@@ -54,7 +54,7 @@ namespace Stardew.InventorySystem
             RefreshUI();
         }
 
-        void NextCategory()
+        public void NextCategory()
         {
             if (currentCategoryIndex >= maxCategoryCount - 1)
                 return;
@@ -64,7 +64,7 @@ namespace Stardew.InventorySystem
             RefreshUI();
         }
 
-        void PrevItem()
+        public void PrevItem()
         {
             if (currentItemIndex <= 0)
                 return;
@@ -73,7 +73,7 @@ namespace Stardew.InventorySystem
             RefreshUI();
         }
 
-        void NextItem()
+        public void NextItem()
         {
             if (currentItemIndex >= maxShownItemCount -1)
                 return;
@@ -85,12 +85,12 @@ namespace Stardew.InventorySystem
         [ContextMenu(nameof(RefreshUI))]
         void RefreshUI()
         {
-            //var currentCategoryInfo = categoryInfoList[currentCategoryIndex];
-           // ui.SetCategory(currentCategoryInfo);
+            var currentCategoryInfo = categoryInfoList[currentCategoryIndex];
+            ui.SetCategory(currentCategoryInfo);
 
             //From our int 'currentCategoryIndex', cast it into 'ItemType'.
             var currentCategory = (ItemType)currentCategoryIndex;
-            
+        
             //Get only items that matched current category.
             var itemsToDisplay = inventory.GetItemsByType(currentCategory);
             maxShownItemCount = itemsToDisplay.Length;
@@ -98,13 +98,13 @@ namespace Stardew.InventorySystem
             //Clear everything and cancel if there are no items with the current category.
             if (maxShownItemCount <= 0)
             {
-                //ui.ClearAllItemUIs();
-                //return;
+                ui.ClearAllItemUIs();
+                return;
             }
             
-            //Current item is retrieved from itemsToDisplay using 'currentItemIndex'
-            //var currentItem = itemsToDisplay[currentItemIndex];
-            //ui.SetCurrentItemInfo(currentItem);
+            //Current item is retrieved from itemsToDisplay using 'currentItemIndex';
+            var currentItem = itemsToDisplay[currentItemIndex];
+            ui.SetCurrentItemInfo(currentItem);
 
             //This will hold list of UIItem_Data for the display of UIItem
             var uiDataList = new List<UIItem_Data>();
@@ -122,14 +122,14 @@ namespace Stardew.InventorySystem
                 //Select only item within start and end index and add to list.
                 if (i >= startIndexToDisplay && i < endIndexToDisplay)
                 {
-                    uiDataList.Add(new UIItem_Data(item));
+                    uiDataList.Add(new UIItem_Data(item, currentItem == item));
                 }
               
                 i++;
             }
             
             //Draw the results! Convert to array to prevent the results from being changed accidentally.
-            //ui.SetItemList(uiDataList.ToArray());
+            ui.SetItemList(uiDataList.ToArray());
         }
     }
 }

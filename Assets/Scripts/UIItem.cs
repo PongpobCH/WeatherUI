@@ -51,13 +51,15 @@ public class UIItem : MonoBehaviour, IPointerExitHandler, IPointerEnterHandler
 
     public class UIItem_Data
     {
-    public ItemData itemData;
+        public ItemData itemData;
+        public bool isSelected;
 
-    public UIItem_Data(ItemData itemData)
-    {
+        public UIItem_Data(ItemData itemData, bool isSelected)
+        {
         this.itemData = itemData;
+        this.isSelected = isSelected;
     }
     
-    }
+}
 
 }

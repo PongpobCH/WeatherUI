@@ -13,11 +13,35 @@ namespace Stardew.InventorySystem
     [SerializeField] UIItem itemUIPrefab;
     [SerializeField] List<UIItem> itemUIList = new List<UIItem>();
     [SerializeField] GameObject description;
+    
+    [Header("Category")]
+    [SerializeField] Image categoryIconImage;
+    [SerializeField] Text categoryText;
+
+    [Header("Current Item")]
+    [SerializeField] Image currentItemIconImage; 
+    [SerializeField] Text descriptionText;
+
+
         
         void Start()
         {
             itemUIPrefab.gameObject.SetActive(false);
         }
+
+        public void SetCategory(CategoryInfo info)
+        {
+            categoryIconImage.sprite = info.icon;
+            categoryText.text = info.name;
+        }
+
+        public void SetCurrentItemInfo(ItemData data)
+        {
+            descriptionText.text = data.description;
+            currentItemIconImage.sprite = data.icon;
+        }
+
+
         public void ClearAllItemUIs()
         {
             foreach (UIItem uiItem in itemUIList)
@@ -54,6 +78,7 @@ namespace Stardew.InventorySystem
     [Serializable]
     public class CategoryInfo
     {
+        public Sprite icon;
         public string name;
     }
 }
