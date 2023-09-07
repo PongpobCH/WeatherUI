@@ -270,7 +270,7 @@ GameObject:
   - component: {fileID: 141687170}
   - component: {fileID: 141687171}
   m_Layer: 0
-  m_Name: Shelf
+  m_Name: Inventory
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -477,7 +477,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -75.5, y: -41.832}
+  m_AnchoredPosition: {x: -107.6, y: -41.626}
   m_SizeDelta: {x: 78.2135, y: 16.7376}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &256206906
@@ -524,13 +524,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11500000, guid: ce563c27294c74a41836e79846e4a6ad, type: 3}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 141687171}
+        m_TargetAssemblyTypeName: Stardew.InventorySystem.ShopPresenter, Assembly-CSharp
+        m_MethodName: PrevCategory
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -744,8 +744,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 117.2973, y: -63.651703}
-  m_SizeDelta: {x: 189.5046, y: 117.0277}
+  m_AnchoredPosition: {x: 165.2, y: -147}
+  m_SizeDelta: {x: 299.5982, y: 117.0277}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &441398197
 GameObject:
@@ -1022,17 +1022,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 4997181172677582320, guid: 785f04fb0c323cb4c94b9685c9661480, type: 3}
   m_PrefabInstance: {fileID: 4997181172117132473}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &622413974 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4997181172738333743, guid: 785f04fb0c323cb4c94b9685c9661480, type: 3}
-  m_PrefabInstance: {fileID: 4997181172117132473}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &790747176
 GameObject:
   m_ObjectHideFlags: 0
@@ -1233,7 +1222,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 365, y: 72}
+  m_AnchoredPosition: {x: 604, y: 72.386}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &986978426
@@ -1409,6 +1398,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1059305634}
   m_CullTransparentMesh: 1
+--- !u!114 &1076101207 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4997181172738333743, guid: 785f04fb0c323cb4c94b9685c9661480, type: 3}
+  m_PrefabInstance: {fileID: 4997181172117132473}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1168877993
 GameObject:
   m_ObjectHideFlags: 0
@@ -1754,8 +1754,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.083297, y: 2.8068}
-  m_SizeDelta: {x: 139.4134, y: 26.088}
+  m_AnchoredPosition: {x: -2.9113, y: -4.4238}
+  m_SizeDelta: {x: 160.558, y: 33.4723}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1295635840
 MonoBehaviour:
@@ -1800,7 +1800,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1295635841}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 141687171}
+        m_TargetAssemblyTypeName: Stardew.InventorySystem.ShopPresenter, Assembly-CSharp
+        m_MethodName: FertilizerCategory
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1295635841
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1874,7 +1886,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 7}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 57.5863, y: 72.844}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1321920525
@@ -1988,8 +2000,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
-  m_fontSizeBase: 30
+  m_fontSize: 24
+  m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2089,7 +2101,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 117.3, y: 82}
+  m_AnchoredPosition: {x: 165.2, y: 338}
   m_SizeDelta: {x: 479.1407, y: 119.2273}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1551644119
@@ -2147,8 +2159,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -342.63, y: -0.000011444}
-  m_SizeDelta: {x: 88.4214, y: 61.4635}
+  m_AnchoredPosition: {x: -401.38, y: 102.11945}
+  m_SizeDelta: {x: 54.5256, y: 130.4692}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1694096498
 GameObject:
@@ -2408,7 +2420,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 72.6, y: -41.729}
+  m_AnchoredPosition: {x: 94.6, y: -41.729}
   m_SizeDelta: {x: 83.9658, y: 16.531}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1886684132
@@ -2455,18 +2467,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11500000, guid: ce563c27294c74a41836e79846e4a6ad, type: 3}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 141687171}
+        m_TargetAssemblyTypeName: Stardew.InventorySystem.ShopPresenter, Assembly-CSharp
+        m_MethodName: NextCategory
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 2
+        m_CallState: 1
 --- !u!114 &1886684133
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2676,7 +2688,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -338.1918, y: -181.22882}
+  m_AnchoredPosition: {x: -406, y: -238.16}
   m_SizeDelta: {x: 63.7592, y: 65.2989}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1918437115
@@ -2754,8 +2766,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.00000047684, y: -17.487}
-  m_SizeDelta: {x: 139.58, y: 26.4898}
+  m_AnchoredPosition: {x: -3.0072, y: -30.4618}
+  m_SizeDelta: {x: 160.7498, y: 33.9879}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2031305464
 MonoBehaviour:
@@ -2800,7 +2812,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2031305465}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 141687171}
+        m_TargetAssemblyTypeName: Stardew.InventorySystem.ShopPresenter, Assembly-CSharp
+        m_MethodName: DecorationCategory
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2031305465
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2876,8 +2900,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.0271, y: 21.521519}
-  m_SizeDelta: {x: 135.5244, y: 24.8716}
+  m_AnchoredPosition: {x: -2.976, y: 19.2581}
+  m_SizeDelta: {x: 156.0791, y: 30.7101}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2080690772
 MonoBehaviour:
@@ -2923,13 +2947,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 141687171}
+        m_TargetAssemblyTypeName: Stardew.InventorySystem.ShopPresenter, Assembly-CSharp
+        m_MethodName: SeedCategory
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -3002,7 +3026,7 @@ PrefabInstance:
     - target: {fileID: -1768487099173008040, guid: 785f04fb0c323cb4c94b9685c9661480, type: 3}
       propertyPath: itemName
       value: 
-      objectReference: {fileID: 622413974}
+      objectReference: {fileID: 1076101207}
     - target: {fileID: -1768487099173008040, guid: 785f04fb0c323cb4c94b9685c9661480, type: 3}
       propertyPath: nameText
       value: 
@@ -3033,7 +3057,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -1768487099173008040, guid: 785f04fb0c323cb4c94b9685c9661480, type: 3}
       propertyPath: ItemData.type
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -1768487099173008040, guid: 785f04fb0c323cb4c94b9685c9661480, type: 3}
       propertyPath: ItemData.count
@@ -3093,7 +3117,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4997181172677582320, guid: 785f04fb0c323cb4c94b9685c9661480, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4997181172677582320, guid: 785f04fb0c323cb4c94b9685c9661480, type: 3}
       propertyPath: m_AnchorMin.x
@@ -3101,7 +3125,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4997181172677582320, guid: 785f04fb0c323cb4c94b9685c9661480, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4997181172677582320, guid: 785f04fb0c323cb4c94b9685c9661480, type: 3}
       propertyPath: m_SizeDelta.x
@@ -3149,11 +3173,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4997181172677582320, guid: 785f04fb0c323cb4c94b9685c9661480, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 28.793
       objectReference: {fileID: 0}
     - target: {fileID: 4997181172677582320, guid: 785f04fb0c323cb4c94b9685c9661480, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -38.8915
       objectReference: {fileID: 0}
     - target: {fileID: 4997181172677582320, guid: 785f04fb0c323cb4c94b9685c9661480, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -3170,6 +3194,10 @@ PrefabInstance:
     - target: {fileID: 4997181172677582321, guid: 785f04fb0c323cb4c94b9685c9661480, type: 3}
       propertyPath: m_Name
       value: UIItem
+      objectReference: {fileID: 0}
+    - target: {fileID: 4997181172677582321, guid: 785f04fb0c323cb4c94b9685c9661480, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4997181172738333740, guid: 785f04fb0c323cb4c94b9685c9661480, type: 3}
       propertyPath: m_SizeDelta.x
