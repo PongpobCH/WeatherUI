@@ -31,14 +31,14 @@ namespace Stardew.InventorySystem
 
         public void SetCategory(CategoryInfo info)
         {
-            categoryIconImage.sprite = info.icon;
-            categoryText.text = info.name;
+            //categoryIconImage.sprite = info.icon;
+            //categoryText.text = info.name;
         }
 
         public void SetCurrentItemInfo(ItemData data)
         {
-            descriptionText.text = data.description;
-            currentItemIconImage.sprite = data.icon;
+            //descriptionText.text = data.description;
+            //currentItemIconImage.sprite = data.icon;
         }
 
 

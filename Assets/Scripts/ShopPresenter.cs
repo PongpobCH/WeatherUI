@@ -54,6 +54,8 @@ namespace Stardew.InventorySystem
             RefreshUI();
         }
 
+        
+
         public void NextCategory()
         {
             if (currentCategoryIndex >= maxCategoryCount - 1)
@@ -62,6 +64,33 @@ namespace Stardew.InventorySystem
             currentCategoryIndex++;
             currentItemIndex = 0;
             RefreshUI();
+        }
+
+        public void SeedCategory()
+        {
+           
+            currentCategoryIndex = 0;
+            currentItemIndex = 0;
+            RefreshUI();
+
+        }
+
+        public void DecorationCategory()
+        {
+           
+            currentCategoryIndex = 2;
+            currentItemIndex = 0;
+            RefreshUI();
+            
+        }
+
+        public void FertilizerCategory()
+        {
+           
+            currentCategoryIndex = 1;
+            currentItemIndex = 0;
+            RefreshUI();
+            
         }
 
         public void PrevItem()
