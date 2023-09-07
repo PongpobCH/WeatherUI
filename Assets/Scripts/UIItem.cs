@@ -47,6 +47,12 @@ public class UIItem : MonoBehaviour, IPointerExitHandler, IPointerEnterHandler
         Debug.Log("Exit");
     }
 
+    public void OnPointerClick(PointerEventData eventData, UIItem_Data data)
+    {
+        goldManager.goldCount -= data.itemData.count;
+        Debug.Log("Item buyed!");
+    }
+
     } 
 
     public class UIItem_Data
