@@ -434,12 +434,12 @@ MonoBehaviour:
   ui: {fileID: 1551644119}
   inventory: {fileID: 141687170}
   categoryInfoList:
-  - icon: {fileID: 0}
-    name: 
-  - icon: {fileID: 0}
-    name: 
-  - icon: {fileID: 0}
-    name: 
+  - icon: {fileID: 21300000, guid: 9e9a67b48f6e9024e95573318cc8a73e, type: 3}
+    name: Fertilizer
+  - icon: {fileID: 21300000, guid: d7657c29646574a48926ae588fd1a0ff, type: 3}
+    name: Seed
+  - icon: {fileID: 21300000, guid: 910161a026716974093da0ea93b203b6, type: 3}
+    name: Decoration
 --- !u!1 &256206904
 GameObject:
   m_ObjectHideFlags: 0
@@ -1233,7 +1233,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 710, y: -298}
+  m_AnchoredPosition: {x: 365, y: 72}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &986978426
@@ -2043,6 +2043,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4997181172324502622, guid: 785f04fb0c323cb4c94b9685c9661480, type: 3}
   m_PrefabInstance: {fileID: 4997181172117132473}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1426352749 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4997181172324502608, guid: 785f04fb0c323cb4c94b9685c9661480, type: 3}
+  m_PrefabInstance: {fileID: 4997181172117132473}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1426352747}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1551644117
 GameObject:
   m_ObjectHideFlags: 0
@@ -2078,7 +2089,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 117.3, y: 0}
+  m_AnchoredPosition: {x: 117.3, y: 82}
   m_SizeDelta: {x: 479.1407, y: 119.2273}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1551644119
@@ -2088,7 +2099,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1551644117}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7107f502aed057d4da231201069b2b04, type: 3}
   m_Name: 
@@ -2096,7 +2107,7 @@ MonoBehaviour:
   itemUIPrefab: {fileID: 2093183672}
   itemUIList: []
   description: {fileID: 986978424}
-  categoryIconImage: {fileID: 0}
+  categoryIconImage: {fileID: 1426352749}
   categoryText: {fileID: 0}
   currentItemIconImage: {fileID: 0}
   descriptionText: {fileID: 0}
@@ -3019,18 +3030,22 @@ PrefabInstance:
     - target: {fileID: -1768487099173008040, guid: 785f04fb0c323cb4c94b9685c9661480, type: 3}
       propertyPath: ItemData.icon
       value: 
-      objectReference: {fileID: 21300000, guid: 9e9a67b48f6e9024e95573318cc8a73e, type: 3}
+      objectReference: {fileID: 0}
+    - target: {fileID: -1768487099173008040, guid: 785f04fb0c323cb4c94b9685c9661480, type: 3}
+      propertyPath: ItemData.type
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: -1768487099173008040, guid: 785f04fb0c323cb4c94b9685c9661480, type: 3}
       propertyPath: ItemData.count
       value: 50
       objectReference: {fileID: 0}
     - target: {fileID: -1768487099173008040, guid: 785f04fb0c323cb4c94b9685c9661480, type: 3}
       propertyPath: ItemData.description
-      value: 'Use to help plant grow faster '
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: -1768487099173008040, guid: 785f04fb0c323cb4c94b9685c9661480, type: 3}
       propertyPath: ItemData.displayName
-      value: 'Basic Fertilizer '
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 4997181172324502608, guid: 785f04fb0c323cb4c94b9685c9661480, type: 3}
       propertyPath: m_Sprite
