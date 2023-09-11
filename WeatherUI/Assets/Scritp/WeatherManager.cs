@@ -10,8 +10,48 @@ public class WeatherManager : MonoBehaviour
     public static WeatherManager Instance {get; private set;}
 
     public int Value; 
+    
 
 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
  private void Awake() 
  
     { 
@@ -28,5 +68,8 @@ public class WeatherManager : MonoBehaviour
 
         
     }
+
+
+
  }
 
