@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-
 using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
@@ -8,7 +7,11 @@ using UnityEngine.UI;
 
 
 
-public class Level : MonoBehaviour
+
+
+public class Level : MonoBehaviour 
+    
+
 {
 
     public Text ValueTxt; 
@@ -29,12 +32,5 @@ public class Level : MonoBehaviour
         SceneManager.LoadScene("second");
         WeatherManager.Instance.Value++;
     }
-
-
-
-
-
-
-
 
 }
