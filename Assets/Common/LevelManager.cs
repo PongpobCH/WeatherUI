@@ -47,19 +47,31 @@ namespace SuperGame
         
         public void LoadScene(string sceneName)
         {
-            var loadSceneAsync = SceneManager.LoadSceneAsync(sceneName);
-            loadSceneAsync.completed += (op) => GameManager.Instance.StartLevel();
+             LoadScene("WeatherClear");
+            //var loadSceneAsync = SceneManager.LoadSceneAsync(sceneName);
+            //loadSceneAsync.completed += (op) => GameManager.Instance.StartLevel();
         }
+        public void LoadScene2(string sceneName)
+        {
+            LoadScene2("WeatherRain");
+        }
+        public void LoadScene3(string sceneName)
+        {
+            LoadScene3("WeatherSnow");
+        }
+
+
+
 
         public void LoadFirstLevel()
         {
-            Reset();
-            LoadScene(levelList[0]);
+            //Reset();
+            //LoadScene(sceneName: levelList[0]);
         }
 
         public void RestartCurrentLevel()
         {
-            LoadScene(levelList[currentScene]);
+            //LoadScene(levelList[currentScene]);
         }
     }
 }

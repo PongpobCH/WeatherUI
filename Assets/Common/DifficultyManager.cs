@@ -18,7 +18,7 @@ namespace SuperGame
         {
             difficultyLevel = value;
             //difficultyUI.SetActive(false);
-            //GameManager.Instance.StartLevel();
+            GameManager.Instance.StartLevel();
         }
     }
 }

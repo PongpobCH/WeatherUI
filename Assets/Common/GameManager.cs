@@ -55,6 +55,8 @@ namespace SuperGame
 
         public void StartLevel()
         {
+
+            Debug.Log("timeScaleToAdd");
             /*isGameOver = false;
             levelEndTimer.Start();
             Resume();
