@@ -11,6 +11,7 @@ namespace SuperGame
     {
         [Header("Status")] [SerializeField] Image lifePointPrefab;
         [SerializeField] List<Image> lifePointList = new List<Image>();
+        
         [SerializeField] TMP_Text levelText;
 
         [Header("Time")] [SerializeField] TMP_Text gameStartCountdownText;
@@ -46,13 +47,14 @@ namespace SuperGame
 
         public void SetGameEndCountdownTime(float timeLeft, float duration)
         {
-            countdownGaugeImage.transform.localScale = new Vector3(timeLeft / duration, 1, 1);
+            /*countdownGaugeImage.transform.localScale = new Vector3(timeLeft / duration, 1, 1);
             gameEndCountdownTimeText.text = Mathf.RoundToInt(timeLeft).ToString();
+            */
         }
 
         public void SetLifeCount(int count)
         {
-            var maxLife = count - lifePointList.Count;
+            /*var maxLife = count - lifePointList.Count;
             for (int i = 0; i <= maxLife; i++)
                 lifePointList.Add(Instantiate(lifePointPrefab, lifePointPrefab.transform.parent, false));
 
@@ -62,6 +64,7 @@ namespace SuperGame
                 image.gameObject.SetActive(index < count);
                 index++;
             }
+            */
         }
 
         public void SetEndGameUIVisible(bool isVisible, bool isLose)
@@ -73,7 +76,7 @@ namespace SuperGame
         
         public void SetLevel(int level)
         {
-            levelText.text = "Level : " + level;
+            //levelText.text = "Level : " + level;
         }
     }
 }

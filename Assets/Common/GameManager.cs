@@ -55,11 +55,12 @@ namespace SuperGame
 
         public void StartLevel()
         {
-            isGameOver = false;
+            /*isGameOver = false;
             levelEndTimer.Start();
             Resume();
             LevelManager.Instance.SetLastPlayedLevel();
             hud.SetGameEndCountdownTime(levelEndTimer.duration, levelEndTimer.duration);
+            */
         }
 
         public void Resume()
@@ -85,7 +86,7 @@ namespace SuperGame
 
         public void Lose()
         {
-            if (isGameOver)
+            /*if (isGameOver)
                 return;
 
             AudioManager.Instance.Play("lose");
@@ -94,7 +95,10 @@ namespace SuperGame
             lifeCount--;
             hud.SetLifeCount(lifeCount);
             hud.SetEndGameUIVisible(true, true);
+            */
+            
         }
+        
 
         void Restart()
         {
