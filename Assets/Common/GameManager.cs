@@ -24,9 +24,9 @@ namespace SuperGame
 
         protected override void InitAfterAwake()
         {
-            Pause();
-            Reset();
-            SetupHUD();
+            //Pause();
+            //Reset();
+            //SetupHUD();
             
             //StartLevel();
         }
