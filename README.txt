@@ -1,0 +1,1 @@
+I accidentally broke the game script so I make a new scene name Weather please check there instead just drag core into Heirachy and evrything should be fine 
